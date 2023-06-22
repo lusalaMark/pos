@@ -7,3 +7,4 @@ For the application to run seamlessly you need yhe following in Place :
          b)PHP Version 7 on Wammp server.
          
          c)Have epson printers Installed and configured with the computer to be used.
+         
