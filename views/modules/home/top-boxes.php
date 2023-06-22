@@ -4,8 +4,8 @@ $item = null;
 $value = null;
 $order = "id";
 
- $controllerSales = new ControllerSales(); 
- $sales = $controllerSales->ctrAddingTotalSales();
+$controllerSales = new ControllerSales(); 
+$sales = $controllerSales->ctrAddingTotalSales();
 
 $categories = ControllerCategories::ctrShowCategories($item, $value);
 $totalCategories = count($categories);
@@ -27,7 +27,7 @@ $totalProducts = count($products);
     
     <div class="inner">
       
-      <h3>$<?php echo number_format($sales["total"],2); ?></h3>
+      <h3>KSHS <?php echo number_format($sales["total"],2); ?></h3>
 
       <p>Sales</p>
     

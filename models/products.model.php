@@ -12,8 +12,9 @@ class ProductsModel{
 
 		if($item != null){
 
-			$stmt = Connection::connect()->prepare("SELECT * FROM $table WHERE $item = :$item ORDER BY id DESC");
-
+			$Connection = new Connection();
+			$stmt = $Connection->connect()->prepare("SELECT * FROM $table WHERE $item = :$item ORDER BY id DESC");
+  
 			$stmt -> bindParam(":".$item, $value, PDO::PARAM_STR);
 
 			$stmt -> execute();
@@ -129,8 +130,9 @@ class ProductsModel{
 
 	static public function mdlUpdateProduct($table, $item1, $value1, $value){
 
-		$stmt = Connection::connect()->prepare("UPDATE $table SET $item1 = :$item1 WHERE id = :id");
-
+		$Connection = new Connection();
+		$stmt = $Connection->connect()->prepare("UPDATE $table SET $item1 = :$item1 WHERE id = :id");
+ 
 		$stmt -> bindParam(":".$item1, $value1, PDO::PARAM_STR);
 		$stmt -> bindParam(":id", $value, PDO::PARAM_STR);
 

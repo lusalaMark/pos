@@ -13,7 +13,9 @@ class ModelSales{
 
 		if($item != null){
 
-			$stmt = Connection::connect()->prepare("SELECT * FROM $table WHERE $item = :$item ORDER BY id ASC");
+			$Connection = new Connection();
+			$stmt = $Connection->connect()->prepare("SELECT * FROM $table WHERE $item = :$item ORDER BY id ASC");
+ 
 
 			$stmt -> bindParam(":".$item, $value, PDO::PARAM_STR);
 
