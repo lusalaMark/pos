@@ -1,6 +1,6 @@
 Installation of the Application
 
-For the application to run seamlessly you need yhe following in Place :
+For the application to run seamlessly you need the following in Place :
 
          a)Wamp Server installed and running.
          
